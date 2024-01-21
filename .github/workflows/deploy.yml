@@ -1,0 +1,36 @@
+name: Deploy Probot App
+
+on: 
+    push:
+        branches:
+            - main
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+
+            - name: Use Node.js
+              uses: actions/setup-node@v4
+
+            - name: Install dependencies
+              run: npm ci
+
+            - name: Build
+              run: npm run build
+
+            - name: Deploy
+              run: |
+                git config --global user.email "prehistorical.dinosaurs@outlook.com"
+                git config --global user.name "Quartinal"
+                git remote add deploy github-pages https://${{ secrets.GITHUB_TOKEN }}@github.com/${{github.repository}}
+                git fetch deploy
+                git checkout -B main
+                git merge --ff-only origin/main
+                git push deploy main
+
+            - name: Start
+              run: npm start
