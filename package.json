@@ -1,5 +1,5 @@
 {
     "scripts": {
-        "start": "npx bun -r esm app.js"
+        "start": "node -r esm app.js"
     }
 }
