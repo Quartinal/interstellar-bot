@@ -1,5 +1,5 @@
 {
     "scripts": {
-        "start": "npm install esm && node -r esm app.js"
+        "start": "npx esm app.js"
     }
 }
