@@ -19,15 +19,5 @@ jobs:
             - name: Install dependencies
               run: npm install
 
-            - name: Deploy
-              run: |
-                git config --global user.email "prehistorical.dinosaurs@outlook.com"
-                git config --global user.name "Quartinal"
-                git remote add deploy github-pages https://${{secrets.GITHUB_TOKEN}}/${{github.repository}}
-                git fetch deploy
-                git checkout -B main
-                git merge --ff-only origin/main
-                git push deploy main
-
             - name: Start
               run: npm start
