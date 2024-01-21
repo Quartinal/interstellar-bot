@@ -1,6 +1,5 @@
 {
     "scripts": {
-        "build": "npm build .",
-        "start": "node -r esm app.js"
+        "start": "bun -r esm app.js"
     }
 }
