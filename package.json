@@ -1,6 +1,6 @@
 {
     "scripts": {
-        "build": "npx tsc",
+        "build": "npm build .",
         "start": "node -r esm app.js"
     }
 }
