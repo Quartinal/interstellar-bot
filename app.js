@@ -1,5 +1,5 @@
-import { App } from "https://cdn.jsdelivr.net/npm/probot@latest"
-import { axios } from "https://cdn.jsdelivr.net/npm/axios@latest"
+import { App } from "https://cdn.jsdelivr.net/npm/probot@12.3.3/lib/index.js"
+import { axios } from "https://cdn.jsdelivr.net/npm/axios@1.6.5/dist/axios.min.js"
 
 const app = new App()
 
