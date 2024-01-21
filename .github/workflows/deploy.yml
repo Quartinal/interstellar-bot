@@ -23,7 +23,7 @@ jobs:
               run: |
                 git config --global user.email "prehistorical.dinosaurs@outlook.com"
                 git config --global user.name "Quartinal"
-                git remote add deploy github-pages https://${{ secrets.GITHUB_TOKEN }}@github.com/${{github.repository}}
+                git remote add deploy github-pages https://github.com/${{github.repository}}
                 git fetch deploy
                 git checkout -B main
                 git merge --ff-only origin/main
