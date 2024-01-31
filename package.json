@@ -1,5 +1,5 @@
 {
     "scripts": {
-        "start": "node app.mjs"
+        "start": "node -r esm app.mjs"
     }
 }
